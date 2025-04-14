@@ -36,7 +36,11 @@ Tạo bảng lichDay
 Sau đó tạo mối liên kết giữa các bảng (FK) và tiến hành nhập dữ liệu từ thời khóa biểu Tuần: 33 (14/04/2025 → 20/04/2025) của lớp K58KTP.K01 và bảng thời gian biểu giảng dạy ở trên cho từng bảng.
 Khi hoàn thành các bước trên ta có được sơ đồ sau
 ![Image](https://github.com/user-attachments/assets/fffbc6f0-d8fd-41e7-a3d1-bbd27aff7689)
-Lúc này ta đã có thể tạo được query truy vấn ra thông tin gồm 4 cột: họ tên gv, môn dạy, giờ vào lớp, giờ ra theo yêu cầu của đề bài. 
+ Sử dụng DECLARE @datetime1 DATETIME = '2025-04-08 06:30:00';
+
+DECLARE @datetime2 DATETIME = '2025-04-08 09:10:00';
+
+Lấy tất cả các buổi học có thời gian giáo viên đang dậy học.
 ![Image](https://github.com/user-attachments/assets/66395b46-f0c3-401a-b49c-38097463783b)
 
 
