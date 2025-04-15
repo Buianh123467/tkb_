@@ -43,7 +43,7 @@ Nhập sữ liệu vào các bảng
 ![Image](https://github.com/user-attachments/assets/c2e6665d-0d77-4d72-a7a8-e1209bd092dc)
 ![Image](https://github.com/user-attachments/assets/bba2d3d7-c96a-4562-bdc2-e28f7196192f)
 Lệnh sql truy vấn thông tin 
-  DECLARE @datetime1 DATETIME = '2025-04-28 07:00:00';
+   DECLARE @datetime1 DATETIME = '2025-04-28 07:00:00';
 DECLARE @datetime2 DATETIME = '2025-04-28 10:00:00';
 
 SELECT 
