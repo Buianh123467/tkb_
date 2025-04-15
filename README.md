@@ -41,25 +41,9 @@ Nhập sữ liệu vào các bảng
 ![Image](https://github.com/user-attachments/assets/2f837931-0bbd-46b3-b0bd-3e8d8b3dd1a9)
 ![Image](https://github.com/user-attachments/assets/cb65a642-032f-4429-a726-5144d2bef3be)
 ![Image](https://github.com/user-attachments/assets/c2e6665d-0d77-4d72-a7a8-e1209bd092dc)
+bảng TKB
 ![Image](https://github.com/user-attachments/assets/bba2d3d7-c96a-4562-bdc2-e28f7196192f)
 Lệnh sql truy vấn thông tin 
-   DECLARE @datetime1 DATETIME = '2025-04-28 07:00:00';
-DECLARE @datetime2 DATETIME = '2025-04-28 10:00:00';
-
-SELECT 
-    GV.TenGV AS [Họ Tên Giáo Viên],
-    MH.TenMon AS [Môn Dạy],
-    TKB.GioVao AS [Giờ Vào],
-    TKB.GioRa AS [Giờ Ra]
-FROM 
-    TKB
-JOIN 
-    GiaoVien GV ON TKB.MaGV = GV.MaGV
-JOIN 
-    MonHoc MH ON TKB.MaMon = MH.MaMon
-WHERE 
-    TKB.Ngay = CAST(@datetime1 AS DATE)
-    AND TKB.GioVao < CAST(@datetime2 AS TIME)
-    AND TKB.GioRa > CAST(@datetime1 AS TIME);
+  ![Image](https://github.com/user-attachments/assets/e3628811-988e-48b0-8627-b7a38a0177a6)
    trả lời câu hỏi khoảng thời gian từ datetime1 tới datetime2 thì có những gv nào đang bận giảng dạy.
   ![Image](https://github.com/user-attachments/assets/59e82800-5fff-48d8-a8fb-b6a3225bff22) 
