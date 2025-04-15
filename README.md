@@ -18,9 +18,10 @@ Gợi ý:
   insert nhiều rows từ excel vào cửa sổ edit dữ liệu 1 table (quan sát thì sẽ làm đc)
   
 
-deadline: 15/4/2025
+
 Truy cập vào TMS.tnut.edu.vn để lấy dữ liệu, ở đây ta sẽ lấy ví dụ là thời khóa biểu Tuần: 33 (14/04/2025 → 20/04/2025) của lớp K58KTP.K01
 Tạo database có tên là TKB, sau đó tiến hành tạo các bảng có tên là GiangVien, Lop, MonHoc, PhongHoc, TietHoc, LichDay
+![Image](https://github.com/user-attachments/assets/2490f833-79b1-4e77-8ffb-dcc1e325f625)
 Tạo bảng Giang vien
 ![Image](https://github.com/user-attachments/assets/65825d9c-43ba-418d-8c26-7075577b1e0d)
 Tạo bảng Lop
