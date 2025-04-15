@@ -37,11 +37,29 @@ Tạo bảng lichDay
 Sau đó tạo mối liên kết giữa các bảng (FK) và tiến hành nhập dữ liệu từ thời khóa biểu Tuần: 33 (14/04/2025 → 20/04/2025) của lớp K58KTP.K01 và bảng thời gian biểu giảng dạy ở trên cho từng bảng.
 Khi hoàn thành các bước trên ta có được sơ đồ sau
 ![Image](https://github.com/user-attachments/assets/fffbc6f0-d8fd-41e7-a3d1-bbd27aff7689)
- Sử dụng DECLARE @datetime1 DATETIME = '2025-04-08 06:30:00';
+Nhập sữ liệu vào các bảng 
+![Image](https://github.com/user-attachments/assets/2f837931-0bbd-46b3-b0bd-3e8d8b3dd1a9)
+![Image](https://github.com/user-attachments/assets/cb65a642-032f-4429-a726-5144d2bef3be)
+![Image](https://github.com/user-attachments/assets/c2e6665d-0d77-4d72-a7a8-e1209bd092dc)
+![Image](https://github.com/user-attachments/assets/bba2d3d7-c96a-4562-bdc2-e28f7196192f)
+Lệnh sql truy vấn thông tin 
+  DECLARE @datetime1 DATETIME = '2025-04-28 07:00:00';
+DECLARE @datetime2 DATETIME = '2025-04-28 10:00:00';
 
-DECLARE @datetime2 DATETIME = '2025-04-08 09:10:00';
-
-Lấy tất cả các buổi học có thời gian giáo viên đang dậy học.
-![Image](https://github.com/user-attachments/assets/66395b46-f0c3-401a-b49c-38097463783b)
-
-
+SELECT 
+    GV.TenGV AS [Họ Tên Giáo Viên],
+    MH.TenMon AS [Môn Dạy],
+    TKB.GioVao AS [Giờ Vào],
+    TKB.GioRa AS [Giờ Ra]
+FROM 
+    TKB
+JOIN 
+    GiaoVien GV ON TKB.MaGV = GV.MaGV
+JOIN 
+    MonHoc MH ON TKB.MaMon = MH.MaMon
+WHERE 
+    TKB.Ngay = CAST(@datetime1 AS DATE)
+    AND TKB.GioVao < CAST(@datetime2 AS TIME)
+    AND TKB.GioRa > CAST(@datetime1 AS TIME);
+   trả lời câu hỏi khoảng thời gian từ datetime1 tới datetime2 thì có những gv nào đang bận giảng dạy.
+  ![Image](https://github.com/user-attachments/assets/59e82800-5fff-48d8-a8fb-b6a3225bff22) 
